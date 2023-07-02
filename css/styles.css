@@ -466,7 +466,7 @@ html, body {
 
 /* Project Pages */
 h1 {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.9rem;
 }
 
@@ -476,7 +476,7 @@ h1 .thanks {
 }
 
 p {
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.3rem;
   padding-top: 1em;
   padding-left: 20%;
