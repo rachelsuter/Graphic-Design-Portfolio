@@ -518,8 +518,8 @@ p {
 
 @media (max-width: 950px) {
   p {
-    padding-left: 4em;
-    padding-right: 4em;
+    padding-left: 2em;
+    padding-right: 2em;
   }
   .video {
     width: 34.8em;
