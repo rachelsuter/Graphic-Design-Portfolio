@@ -1,0 +1,652 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  color: #242424;
+}
+
+* {
+  font-family: "Raleway";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+}
+
+.logo-link {
+  color: #242424;
+  text-decoration: none;
+  font-family: Bellagia, serif;
+}
+
+.home-link {
+  padding-left: 3em;
+}
+
+.top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #00BAF0;
+  background: white;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #242424;
+  height: 50px;
+  width: 100%;
+  padding-top: 3.6em;
+  padding-bottom: 3.6em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu > li .active {
+  text-decoration: underline;
+  text-underline-offset: .4em;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #242424;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: -webkit-transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .logo {
+    all: revert;
+  }
+  .home-link {
+    padding-left: 0;
+  }
+  .top-nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .menu-button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 6em;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 5em;
+    padding: 2em;
+    -webkit-transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: #242424;
+    background-color: #fff;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+  .dropdown:hover .dropdown-content {
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+  .dropdown:hover .dropdown-content a {
+    padding: 1.5em;
+  }
+  .social-icons {
+    /*left: 18em;*/
+    all: revert;
+    visibility: hidden;
+  }
+  .linkedin {
+    visibility: visible !important;
+  }
+}
+
+/* AFTER NAV */
+@font-face {
+  font-family: Bellagia;
+  src: url("/fonts/BellagiaDisplayThin-x32Mj.ttf");
+}
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* center everything */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2em;
+  padding: 1.4em 360px;
+  /* prevent crawling on the logo */
+  margin-bottom: 2em;
+}
+
+.img {
+  position: absolute;
+  /* remove the logo from the flow */
+  left: 20px;
+  /* move the logo to left */
+  height: 48px;
+  width: 260px;
+}
+
+.social-icons {
+  position: absolute;
+  right: 20px;
+  height: 10px;
+  width: 10px;
+}
+
+.linkedin {
+  visibility: hidden;
+}
+
+.logo {
+  /*width: 175px; 
+    height: 52px;*/
+  font-size: 2.4rem;
+  text-decoration: none;
+  color: #242424;
+  font-family: Bellagia;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #242424;
+  font-family: 'Raleway', sans-serif;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: .4em;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: transparent;
+  color: #242424;
+  font-family: 'Raleway', sans-serif;
+  padding: 0;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  /*position: relative;*/
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+.dropdown-content .active {
+  text-decoration: underline;
+  text-underline-offset: .25em;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #242424;
+  font-family: 'Raleway', sans-serif;
+  padding: 12px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  text-decoration: underline;
+  text-underline-offset: .25em;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/*.dropdown:hover .dropbtn {background-color: #3e8e41;}*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*.grid {
+      margin: 10px;
+  } */
+.container {
+  max-width: 1224px;
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.photo-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.photo img:hover {
+  opacity: .5;
+}
+
+@media (max-width: 768px) {
+  .photo-gallery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer {
+  padding: 2em;
+}
+
+.left {
+  position: absolute;
+  /* remove the logo from the flow */
+  left: 20px;
+}
+
+.left .footer-social-icons {
+  position: absolute;
+  padding-top: 4.5em;
+  padding-bottom: 1em;
+  left: 2.5em;
+}
+
+.right {
+  position: absolute;
+  right: 20px;
+}
+
+.right ul {
+  list-style: none;
+  display: block;
+  float: left;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+}
+
+.right ul li {
+  padding-top: .8em;
+}
+
+.right ul .nav-link {
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}
+
+@media (max-width: 950px) {
+  .left {
+    left: 2em;
+  }
+  .left .img {
+    left: 1.2em;
+  }
+  .left .footer-social-icons {
+    left: 1.2em;
+    padding-top: 10.5em;
+    padding-bottom: 1.5em;
+  }
+  .right {
+    position: absolute;
+    left: 1.3em;
+    padding-top: 3em;
+  }
+}
+
+/* Project Pages */
+h1 {
+  font-family: Raleway, sans-serif;
+  font-size: 1.9rem;
+}
+
+h1 .thanks {
+  padding-top: 50em !important;
+  padding-bottom: 50em !important;
+}
+
+p {
+  font-family: Raleway, sans-serif;
+  font-size: 1.3rem;
+  padding-top: 1em;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 2em;
+}
+
+.description {
+  text-align: center;
+}
+
+.link {
+  color: #6aa0b3;
+}
+
+.project-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+
+.project-photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.video {
+  width: 50em;
+  height: auto;
+}
+
+@media (max-width: 950px) {
+  p {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  .video {
+    width: 34.8em;
+    height: auto;
+  }
+}
+
+/* About Page */
+.about-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 950px) {
+  .about-wrapper {
+    margin-left: 2em;
+    margin-bottom: 0em;
+    margin-right: 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .column {
+    padding-top: 2em;
+  }
+  .mobile-centered {
+    text-align: center;
+  }
+}
+
+.column {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+h1 {
+  padding-bottom: .5em;
+}
+
+.thanks h1 {
+  padding-top: 8.5em;
+  padding-bottom: 8.5em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.headshot {
+  padding-top: 3em;
+  width: 23em;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+}
+
+input[type=email], select, textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #242424;
+  color: white;
+  padding: 20px 70px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #242424;
+}
+
+/* Add a background color and some padding around the form */
+.contact-container {
+  border-radius: 5px;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.centered {
+  vertical-align: center;
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */
