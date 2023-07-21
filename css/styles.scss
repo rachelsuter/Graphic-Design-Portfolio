@@ -344,6 +344,27 @@ html, body {
       }
   }
 
+  .photo {
+    source {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    }
+  }
+  
+  .photo picture {
+    object-fit: cover;
+  }
+  
+  .photo source:hover {
+    opacity: .5;
+  }
+
   @media(max-width:768px){
       .photo-gallery {
           flex-direction: column;
@@ -424,7 +445,7 @@ html, body {
 
     .footer-social-icons {
         left: 1.2em;
-        padding-top: 20.5em;
+        padding-top: 18.5em;
         padding-bottom: 1.5em;
     }
   }
