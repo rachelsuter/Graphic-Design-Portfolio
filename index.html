@@ -47,62 +47,83 @@
             <a href="/digital-advertising.html">
                 <div class="photo">
                     <picture>
-                        <!-- Mobile Image -->
-                        <source media="(max-width: 600px)" srcset="images/digital-advertising.webp">
                         <!-- Desktop Image -->
                         <source media="(min-width: 601px)" srcset="images/digital-advertising.webp">
-                        <!-- Fallback Image --> <!--loading="lazy"-->
-                        <img aria-hidden="true" decoding="async" src="images/digital-advertising.webp" alt="Digital Advertising" width="523" height="383">
+                        <!-- Mobile Image -->
+                        <source media="(max-width: 600px)" srcset="images/digital-advertising.webp">
+                        <!-- Fallback Image --> <!--loading="lazy" for below the fold content-->
+                        <img aria-hidden="true" decoding="async" src="images/digital-advertising.jpg" alt="Digital Advertising" width="523" height="383">
                     </picture>
                 </div>
             </a>
             <a href="/motion-animation.html">
                 <div class="photo">
-                    <img src="images/motion.gif" alt="">
+                    <div id="video-overlay"></div>
+                    <video class="video-hover" width="100%" height="auto" autoplay loop>
+                        <!-- Desktop Image -->
+                        <source media="(min-width: 601px)" src="images/motion.webm" type="video/webm">
+                        <!-- Mobile Image -->
+                        <source media="(max-width: 600px)" src="images/motion.webm" type="video/webm">
+                        <img src="images/motion.gif" alt="Motion Animation">
+                    </video>
                 </div>
             </a>
             <a href="/environmental-commission.html">
                 <div class="photo">
-                    <img src="images/EC-preview.jpg" alt="">
+                    <picture>
+                        <!-- Desktop Image -->
+                        <source media="(min-width: 601px)" srcset="images/EC-preview.webp">
+                        <!-- Mobile Image -->
+                        <source media="(max-width: 600px)" srcset="images/EC-preview.webp">
+                        <!-- Fallback Image --> <!--loading="lazy"-->
+                        <img aria-hidden="true" decoding="async" src="images/EC-preview.jpg" alt="Environmental Commission" width="523" height="383">
+                    </picture>
                 </div>
             </a>
-            <!--
-            <a href="">
-                <div class="photo">
-                    <img src="images/infographic.png" alt="">
-                </div>
-            </a> 
-            -->
         </div>
         <div class="column">
             <a href="/social-stories.html">
                 <div class="photo">
+                    <picture>
+                        <!-- Desktop Image -->
+                        <source media="(min-width: 601px)" srcset="images/social-portfolioPreview.webp">
+                        <!-- Mobile Image -->
+                        <source media="(max-width: 600px)" srcset="images/social-portfolioPreview.webp">
+                        <!-- Fallback Image --> <!--loading="lazy"-->
+                        <img aria-hidden="true" decoding="async" src="images/social-portfolioPreview.jpg" alt="Organic Social Stories" width="530" height="auto">
+                    </picture>
+                </div>
+                <!--<
+                div class="photo">
                     <img src="images/social-portfolioPreview.jpg" alt="">
                 </div>
+                -->
             </a>
-            <!--
-            <a href="">
-                <div class="photo">
-                    <img src="images/logo-design.png" alt="">
-                </div>
-            </a>
-            
-            <a href="">
-                <div class="photo">
-                    <img src="https://source.unsplash.com/Wpg3Qm0zaGk" alt="">
-                </div>
-            </a>
-            -->
         </div>
         <div class="column">
             <a href="/nuthatch-naturals.html">
                 <div class="photo">
-                    <img src="images/NN.jpg" alt="">
+                    <picture>
+                        <!-- Desktop Image -->
+                        <source media="(min-width: 601px)" srcset="images/NN.webp">
+                        <!-- Mobile Image -->
+                        <source media="(max-width: 600px)" srcset="images/NN.webp">
+                        <!-- Fallback Image --> <!--loading="lazy"-->
+                        <img aria-hidden="true" decoding="async" src="images/NN.jpg" alt="Nuthatch Naturals Instagram Design" width="530" height="auto">
+                    </picture>
+                    <!--<img src="images/NN.jpg" alt="">-->
                 </div>
             </a>
             <a href="/print.html">
                 <div class="photo">
-                    <img src="images/print-portfolioPreview.jpg" alt="">
+                    <picture>
+                        <!-- Desktop Image -->
+                        <source media="(min-width: 601px)" srcset="images/print-portfolioPreview.webp">
+                        <!-- Mobile Image -->
+                        <source media="(max-width: 600px)" srcset="images/print-portfolioPreview.webp">
+                        <!-- Fallback Image --> <!--loading="lazy"-->
+                        <img aria-hidden="true" decoding="async" src="images/print-portfolioPreview.jpg" alt="Print Design" width="530" height="auto">
+                    </picture>
                 </div>
             </a>
             <!--
