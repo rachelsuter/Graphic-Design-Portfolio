@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preload" as="image" href="images/digital-advertising.webp">
+    <link rel="preload" as="image" href="images/images/digital-ads/rosehb-Email_Hero-UpdatedRoundel.gif">
     <link rel="preload" as="image" href="images/social-portfolioPreview.webp">
     <link rel="preload" as="image" href="images/NN.webp">
     <link rel="preload" as="image" href="images/print-portfolioPreview.webp">
@@ -62,14 +63,26 @@
             </a>
             <a href="/motion-animation.html">
                 <div class="photo">
+                    <!--
                     <div id="video-overlay"></div>
                     <video class="video-hover" width="100%" height="auto" autoplay loop>
-                        <!-- Desktop Image -->
+                        //Desktop Image
                         <source media="(min-width: 601px)" src="images/motion.webm" type="video/webm">
-                        <!-- Mobile Image -->
+                        //Mobile Image 
                         <source media="(max-width: 600px)" src="images/motion.webm" type="video/webm">
                         <img src="images/motion.gif" alt="Motion Animation">
                     </video>
+                    -->
+                    
+                    <picture>
+                        <!-- Desktop Image -->
+                        <source media="(min-width: 601px)" srcset="images/digital-ads/rosehb-Email_Hero-UpdatedRoundel.gif">
+                        <!-- Mobile Image -->
+                        <source media="(max-width: 600px)" srcset="images/digital-ads/rosehb-Email_Hero-UpdatedRoundel.gif">
+                        <!-- Fallback Image --> <!--loading="lazy"-->
+                        <img aria-hidden="true" decoding="async" src="images/digital-ads/rosehb-Email_Hero-UpdatedRoundel.gif" alt="Motion Animation" width="523" height="383">
+                    </picture>
+
                 </div>
             </a>
             <a href="/environmental-commission.html">
